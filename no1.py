@@ -3,14 +3,10 @@ import seaborn as sns
 import streamlit as st
 import matplotlib.pyplot as plt
 order_items = pd.read_csv('order_items_dataset.csv')
-order_payments = pd.read_csv('order_payments_dataset.csv')
-order_reviews = pd.read_csv('order_reviews_dataset.csv')
 orders = pd.read_csv('orders_dataset.csv')
 products = pd.read_csv('products_dataset.csv')
-product_translation = pd.read_csv('product_category_name_translation.csv')
-sellers = pd.read_csv('sellers_dataset.csv')
 customers = pd.read_csv('customers_dataset.csv')
-geolocation = pd.read_csv('geolocation_dataset.csv')
+
 orders_items_merged = pd.merge(orders, order_items, on='order_id')
 full_data = pd.merge(orders_items_merged, customers, on='customer_id')
 full_data_with_products = pd.merge(full_data, products, on='product_id')
