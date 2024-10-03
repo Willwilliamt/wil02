@@ -1,0 +1,7 @@
+numpy==3.7.0
+streamlit
+seaborn==0.13.2
+matplotib==3.9.2
+plotly==5.24.1
+pandas==2.2.3
+joblib==1.4.2
